@@ -11,16 +11,5 @@
       "src": "/(.*)",
       "dest": "dist/server.js"
     }
-  ],
-  "env": {
-    "DATABASE_URL": "postgresql://postgres:1234@localhost:5432/book_listing?schema=public"
-  },
-  "build": {
-    "functions": {
-      "src/**/*.ts": {
-        "includeFiles": "src/**/*.ts"
-      },
-      "command": "yarn install && yarn build && prisma generate "
-    }
-  }
+  ]
 }
