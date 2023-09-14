@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/v1', routes);
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Hello from Books Catalog server!' });
+});
 
 //global error handler
 app.use(globalErrorHandler);
