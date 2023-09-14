@@ -1,16 +1,26 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "dist/server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "dist/server.js"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/server.js"
+    }
+  ],
+  "build": {
+    "env": {
+      "DATABASE_URL": "postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
+    },
+    "functions": {
+      "api/**/*.js": {
+        "includeFiles": "api/**/*.ts"
+      },
+      "command": "yarn build && prisma generate"
+    }
   }
-  
+}
