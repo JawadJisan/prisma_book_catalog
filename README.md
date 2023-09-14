@@ -1,4 +1,5 @@
 Live Link: https://bookstore-prisma.vercel.app/
+Live Link: https://book-catalog-prisma-jawadjisan.vercel.app/
 
 ## Application Routes:
 
