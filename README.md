@@ -1,36 +1,37 @@
-Live Link: https://bookstore-prisma.vercel.app/
-Live Link: https://book-catalog-prisma-jawadjisan.vercel.app/
+### Live Link: https://book-catalog-prisma-jawadjisan.vercel.app/
 
 ## Application Routes:
 
 ### User
 
-- https://bookstore-prisma.vercel.app/api/v1/auth/signup/ (POST)
-- https://bookstore-prisma.vercel.app/api/v1/users/ (GET)
-- https://bookstore-prisma.vercel.app/api/v1/users/817e77da-a439-46b5-a942-3083c080f22e/ (Single GET)
-- https://bookstore-prisma.vercel.app/api/v1/users/817e77da-a439-46b5-a942-3083c080f22e/ (PATCH)
-- https://bookstore-prisma.vercel.app/api/v1/users/dd47ce77-3ced-4ed5-aa97-d46c0f40825c/ (DELETE)
-- https://bookstore-prisma.vercel.app/api/v1/profile/ (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/auth/signup(POST)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/auth/signin(POST)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/users/ (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/users/9b2b952a-9da8-4a3f-87d7-db2773570be1 (Single GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/users/9b2b952a-9da8-4a3f-87d7-db2773570be1 (PATCH)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/users/c973cd2b-44c4-4918-8a9b-61e4003db3e3/ (DELETE)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/profile/ (GET)
 
 ### Category
 
-- https://bookstore-prisma.vercel.app/api/v1/categories/create-category/ (POST)
-- https://bookstore-prisma.vercel.app/api/v1/categories/ (GET)
-- https://bookstore-prisma.vercel.app/api/v1/categories/3f38a33e-1587-4513-ace3-dc7975016363/ (Single GET)
-- https://bookstore-prisma.vercel.app/api/v1/categories/ec2ddb0d-099f-4383-b4a0-bf6d58ea1402/ (PATCH)
-- https://bookstore-prisma.vercel.app/api/v1/categories/ec2ddb0d-099f-4383-b4a0-bf6d58ea1402/ (DELETE)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/categories/create-category (POST)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/categories/ (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/categories/ef797934-1d9e-410e-9c91-eb1cca6ab0f9 (Single GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/categories/ef797934-1d9e-410e-9c91-eb1cca6ab0f9 (PATCH)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/categories/57f785d9-38e1-48aa-917e-039f09492f1c (DELETE)
 
 ### Books
 
-- https://bookstore-prisma.vercel.app/api/v1/books/create-book/ (POST)
-- https://bookstore-prisma.vercel.app/api/v1/books (GET)
-- https://bookstore-prisma.vercel.app/api/v1/books/3f38a33e-1587-4513-ace3-dc7975016363/category (GET)
-- https://bookstore-prisma.vercel.app/api/v1/books/317ed53c-9a1b-44f1-9b13-f7a749a754c2 (GET)
-- https://bookstore-prisma.vercel.app/api/v1/books/317ed53c-9a1b-44f1-9b13-f7a749a754c2 (PATCH)
-- https://bookstore-prisma.vercel.app/api/v1/books/5f729336-e070-4bd0-9476-31f9b3adf39c (DELETE)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/books/create-book/ (POST)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/books (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/books/ef797934-1d9e-410e-9c91-eb1cca6ab0f9/category (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/books/688f316b-5982-427f-9c21-1161c0772c09 (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/books/688f316b-5982-427f-9c21-1161c0772c09 (PATCH)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/books/688f316b-5982-427f-9c21-1161c0772c09 (DELETE)
 
 ### Orders
 
-- https://bookstore-prisma.vercel.app/api/v1/orders/create-order (POST)
-- https://bookstore-prisma.vercel.app/api/v1/orders (GET)
-- https://bookstore-prisma.vercel.app/api/v1/orders/5db83043-a141-41ee-9aea-21d400196bd5 (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/orders/create-order (POST)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/orders (GET)
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/orders (GET) [for specefic customer using jwt token]
+- https://book-catalog-prisma-jawadjisan.vercel.app/api/v1/orders/acd442d1-1566-488f-abda-33930a1c9b3a (GET)
