@@ -2,25 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/server.js",
+      "src": "src/server.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/server.js"
+      "dest": "src/server.ts"
     }
   ],
+  "env": {
+    "DATABASE_URL": "postgresql://postgres:1234@localhost:5432/book_listing?schema=public"
+  },
   "build": {
-    "env": {
-      "DATABASE_URL": "postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
-    },
     "functions": {
-      "api/**/*.js": {
-        "includeFiles": "api/**/*.ts"
+      "src/**/*.ts": {
+        "includeFiles": "src/**/*.ts"
       },
-      "command": "yarn build && prisma generate"
+      "command": "yarn install && yarn build && prisma generate"
     }
   }
 }
