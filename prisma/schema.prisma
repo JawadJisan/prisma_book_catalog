@@ -33,17 +33,6 @@ enum UserRole {
   customer
 }
 
-model Category {
-  id    String @id @default(uuid())
-  title String
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  books     Book[]
-
-  @@map("categories")
-}
-
 model Book {
   id              String @id @default(uuid())
   title           String
@@ -61,6 +50,26 @@ model Book {
   orderedBook      OrderedBook[]
 
   @@map("books")
+}
+
+// model Category {
+//   id    String @id @default(uuid())
+//   title String
+
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+//   books     Book[]
+
+//   @@map("categories")
+// }
+
+model Category {
+  id    String @id @default(uuid())
+  title String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Book      Book[]
 }
 
 model ReviewAndRating {

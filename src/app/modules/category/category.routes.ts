@@ -1,0 +1,29 @@
+import { UserRole } from '@prisma/client';
+import express from 'express';
+import auth from '../../middlewares/auth';
+import validateRequest from '../../middlewares/validateRequest';
+import { CategoryControllers } from './category.controllers';
+import { CategoryValidators } from './category.validation';
+const router = express.Router();
+
+router.post(
+  '/create-category',
+  auth(UserRole.admin),
+  validateRequest(CategoryValidators.createCategoryZodSchema),
+  CategoryControllers.createCategory
+);
+
+router.get('/', auth(UserRole.admin), CategoryControllers.getAllCategories);
+
+router.get('/:id', auth(UserRole.admin), CategoryControllers.getCategory);
+
+router.patch(
+  '/:id',
+  auth(UserRole.admin),
+  validateRequest(CategoryValidators.updateCategoryZodSchema),
+  CategoryControllers.updateCategory
+);
+
+router.delete('/:id', auth(UserRole.admin), CategoryControllers.deleteCategory);
+
+export const CategoryRoutes = router;
