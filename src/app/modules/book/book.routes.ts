@@ -13,20 +13,16 @@ router.post(
   BookControllers.createBook
 );
 
-router.get('/', auth(UserRole.admin), BookControllers.getAllBooks);
+router.get('/', BookControllers.getAllBooks);
 
 // router.get(
 //   '/:categoryId',
 //   auth(UserRole.admin),
 //   BookControllers.getBooksByCategoryId
 // );
-router.get(
-  '/:categoryId/category',
-  auth(UserRole.admin),
-  BookControllers.getBooksByCategoryId
-);
+router.get('/:categoryId/category', BookControllers.getBooksByCategoryId);
 
-router.get('/:id', auth(UserRole.admin), BookControllers.getBook);
+router.get('/:id', BookControllers.getBook);
 
 router.patch('/:id', auth(UserRole.admin), BookControllers.updateBook);
 

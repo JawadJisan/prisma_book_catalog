@@ -13,9 +13,9 @@ router.post(
   CategoryControllers.createCategory
 );
 
-router.get('/', auth(UserRole.admin), CategoryControllers.getAllCategories);
+router.get('/', CategoryControllers.getAllCategories);
 
-router.get('/:id', auth(UserRole.admin), CategoryControllers.getCategory);
+router.get('/:id', CategoryControllers.getCategory);
 
 router.patch(
   '/:id',
