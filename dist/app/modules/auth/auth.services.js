@@ -39,11 +39,11 @@ const signin = (signInData) => __awaiter(void 0, void 0, void 0, function* () {
     if (signInData.password !== password) {
         throw new ApiError_1.default(http_status_1.default.BAD_REQUEST, 'Incorrect credentials!');
     }
-    console.log(process.env.JWT_SECRET);
-    console.log(process.env.JWT_REFRESH_EXPIRES_IN);
+    // console.log(process.env.JWT_SECRET);
+    // console.log(process.env.JWT_REFRESH_EXPIRES_IN);
     // Generate Token
     const token = jwtHelpers_1.jwtHelpers.createToken({ userId: id, role }, process.env.JWT_SECRET, process.env.JWT_REFRESH_EXPIRES_IN);
-    return { token };
+    return token;
     // return userExist;
 });
 exports.AuthServices = {

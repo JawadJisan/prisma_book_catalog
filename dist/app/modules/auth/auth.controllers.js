@@ -41,11 +41,12 @@ const signup = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0,
 const signin = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const userSignIn = __rest(req.body, []);
     const result = yield auth_services_1.AuthServices.signin(userSignIn);
+    console.log('token: ', result);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_1.default.OK,
         success: true,
-        message: 'User Signed In successfully!',
-        data: result,
+        message: 'User signin successfully!',
+        token: result,
     });
 }));
 exports.AuthControllers = {
