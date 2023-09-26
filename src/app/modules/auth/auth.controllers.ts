@@ -20,11 +20,13 @@ const signin: RequestHandler = catchAsync(async (req, res) => {
   const { ...userSignIn } = req.body;
   const result = await AuthServices.signin(userSignIn);
 
+  console.log('token: ', result);
+
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'User Signed In successfully!',
-    data: result,
+    message: 'User signin successfully!',
+    token: result,
   });
 });
 

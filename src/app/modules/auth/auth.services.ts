@@ -30,8 +30,8 @@ const signin = async (signInData: IAuth) => {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Incorrect credentials!');
   }
 
-  console.log(process.env.JWT_SECRET);
-  console.log(process.env.JWT_REFRESH_EXPIRES_IN);
+  // console.log(process.env.JWT_SECRET);
+  // console.log(process.env.JWT_REFRESH_EXPIRES_IN);
 
   // Generate Token
   const token = jwtHelpers.createToken(
@@ -39,7 +39,7 @@ const signin = async (signInData: IAuth) => {
     process.env.JWT_SECRET as Secret,
     process.env.JWT_REFRESH_EXPIRES_IN as string
   );
-  return { token };
+  return token;
   // return userExist;
 };
 
